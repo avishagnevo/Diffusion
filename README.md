@@ -13,22 +13,15 @@ The implementation follows the key principles outlined in the DDPM paper, includ
 #### Equation 3: Variational Bound on Negative Log-Likelihood
 Training optimizes the variational bound on negative log-likelihood:
 
-$$
-\mathcal{L}(\theta) = \mathbb{E}_q \left[ -\log p_\theta(\mathbf{x}_T) - \sum_{t \geq 1} \log \frac{p_\theta(\mathbf{x}_{t-1}|\mathbf{x}_t)}{q(\mathbf{x}_t|\mathbf{x}_{t-1})} \right]
-$$
+![Equation 3](equation3.png)
 
 ---
 
 #### Equation 12: Simplified Loss Function
 The model is also trained using a simplified variant of the variational bound:
 
-$$
-\mathcal{L}'(\theta) = \mathbb{E}_{t, \mathbf{x}_0, \boldsymbol{\epsilon}} \left[
-\frac{\beta_t^2}{2 \sigma_t^2 \alpha_t (1 - \bar{\alpha}_t)} \left\| \boldsymbol{\epsilon} - \boldsymbol{\epsilon}_\theta \left( \sqrt{\bar{\alpha}_t} \mathbf{x}_0 + \sqrt{1 - \bar{\alpha}_t} \boldsymbol{\epsilon}, t \right) \right\|^2
-\right]
-$$
+![Equation 12](equation12.png)
 
----
 
 ## Implementation Details
 
