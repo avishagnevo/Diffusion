@@ -10,17 +10,8 @@ The implementation follows the key principles outlined in the DDPM paper, includ
 
 ### Key Equations
 
-#### Equation 3: Variational Bound on Negative Log-Likelihood
-Training optimizes the variational bound on negative log-likelihood:
+![Equations](images/ddpm_equations.png)
 
-![Equation 3](equation3.png)
-
----
-
-#### Equation 12: Simplified Loss Function
-The model is also trained using a simplified variant of the variational bound:
-
-![Equation 12](equation12.png)
 
 
 ## Implementation Details
