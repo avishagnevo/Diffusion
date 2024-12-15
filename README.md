@@ -6,6 +6,8 @@ This repository contains a custom implementation of a 1D Diffusion Model inspire
 
 ## Overview
 
+![Diffusion](images/diffusion_idea.png)
+
 The implementation follows the key principles outlined in the DDPM paper, including the forward and reverse diffusion processes. The model is trained using the variational bound and its simplified variant to optimize the diffusion process.
 
 ### Key Equations
